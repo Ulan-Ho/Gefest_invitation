@@ -1,0 +1,145 @@
+body {
+    background-color: #01070B;
+    margin: 0;
+    color: white;
+    font-size: 26;
+}
+
+
+
+
+/*-----------------------------------First section--------------------------------------------------------------------------------------*/
+.first-section {
+    display: flex;
+    padding: 100px;
+    align-items: center;
+    height: 30vh;
+}
+
+.right-first {
+    width: 60%;
+}
+
+.right-first > p {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.left-first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-first > img {
+    padding-left: 100px; 
+    width: 400px;
+    height: 400px;
+}
+
+
+/*-----------------------------------Bootcamp invitation--------------------------------------------------------------------------------------*/
+
+.bootcamp-invitation {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    padding: 100px;
+}
+
+.right-first, .bootcamp-invitation > h2 {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.invitation-section-card {
+    display: flex;
+    justify-content: space-around;
+}
+
+.invitation-card {
+    border-bottom: 5px solid green;
+}
+
+
+.invitation-card > b {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.invitation-card > p {
+    color: #A0A0A2;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.change-card {
+    display: flex;
+    flex-direction: row;
+}
+
+/*-----------------------------------History Gefest--------------------------------------------------------------------------------------*/
+
+.history-gefest {
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+}
+
+.history-gefest > img {
+    min-width: 55%;
+}
+
+ 
+/*-----------------------------------Boot information section--------------------------------------------------------------------------------------*/
+
+.bootcamp-information-section {
+    padding: 100px;
+}
+
+.bootcamp-information-section > b {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.bootcamp-information-section > p {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/*-----------------------------------Boot information section--------------------------------------------------------------------------------------*/
+
+.student-case-section {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cases-student {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.student-case-card {
+    width: 400px;
+    background-color: antiquewhite;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+}
+
+/*-----------------------------------job openings section--------------------------------------------------------------------------------------*/
+
+.job-openings-section {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+#img-job-openings {
+    width: 100%;
+
+}
