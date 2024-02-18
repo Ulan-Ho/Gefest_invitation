@@ -31,6 +31,3 @@ function showJuniorContent() {
 //     justify-content: space-between;
 // }
 
-function showWeStudents() {
-    document.getElementById('caseStudent').style.textAlign = 'Hello boys';
-}

@@ -226,11 +226,7 @@ body {
 }
 
 .student-case-card {
-    width: 400px;
-    background-color: antiquewhite;
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: column;
+    
 }
 
 /*-----------------------------------job openings section--------------------------------------------------------------------------------------*/
