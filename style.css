@@ -3,8 +3,12 @@ body {
     margin: 0;
     color: white;
     font-size: 26;
+
+    
 }
 
+
+/*------------------------------------------Beta--------------------------------------------------*/
 
 
 
@@ -47,6 +51,61 @@ body {
     padding: 100px;
 }
 
+.bootcamp-invitation > h2 {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.options-container {
+    display: flex;
+    gap: 20px;
+}
+
+.option {
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid #74C048;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.option:hover {
+    background-color: #ddd;
+}
+
+.animation-container {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+
+}
+
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+
+
+
+.cards {
+    width: 344px;
+}
+
+.cards > b {
+    width: 700;
+    font-size: 24px;
+}
+
+.cards > p {
+    width: 400;
+    font-size: 22px;
+    color: #A0A0A2;
+}
+
+/* 
 .right-first, .bootcamp-invitation > h2 {
     font-size: 40px;
     font-weight: 900;
@@ -57,7 +116,14 @@ body {
     justify-content: space-around;
 }
 
-.invitation-card {
+.invitation-section-card > button{
+    border: 0;
+    background-color: black;
+}
+
+
+
+.invitation-card:checked{
     border-bottom: 5px solid green;
 }
 
@@ -74,9 +140,45 @@ body {
 }
 
 .change-card {
+    padding-top: 75px;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
+
+.card-1{
+    border-bottom: 5px solid #74C048;
+}
+
+.card-2{
+    align-items: center;
+    border-bottom: 2px solid green;
+}
+
+.card-2:active {
+    border-bottom: 5px solid #74C048;
+
+    .card-1 {
+        align-items: center;
+    border-bottom: 2px solid green;
+    }
+}
+
+.cards {
+    width: 344px;
+}
+
+.cards > b {
+    width: 700;
+    font-size: 24px;
+}
+
+.cards > p {
+    width: 400;
+    font-size: 22px;
+    color: #A0A0A2;
+} */
 
 /*-----------------------------------History Gefest--------------------------------------------------------------------------------------*/
 
@@ -142,4 +244,67 @@ body {
 #img-job-openings {
     width: 100%;
 
+}
+
+.job-all > img{
+}
+
+.all-b {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/*-----------------------------------input section--------------------------------------------------------------------------------------*/
+
+.input-section {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    font-size: 200%;
+}
+
+#slider-container {
+
+    background-color: #74C048;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    padding: 25px 100px;
+}
+
+#year-slider {
+    width: 100%;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+
+/*-----------------------------------Task reduce Amount--------------------------------------------------------------------------------------*/
+
+#task-reduce-amount {
+    padding: 100px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+#tasks-container {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+#repost-task {
+    margin-top: 20px;
+}
+
+#result {
+    margin-top: 20px;
 }

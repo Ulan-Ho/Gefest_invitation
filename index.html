@@ -5,15 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gefest invitation</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <script type="importmap">
+        {
+          "imports": {
+            "react": "https://esm.sh/react@18.2.0",
+            "react-dom": "https://esm.sh/react-dom@18.2.0",
+            "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+            "@codesandbox/sandpack-react": "https://esm.sh/@codesandbox/sandpack-react@2.8.0"
+          }
+        }
+      </script>
+   
+      <script type="module">
+        import React from "react";
+        import { createRoot } from "react-dom/client";
+        import { Sandpack } from "@codesandbox/sandpack-react";
+   
+        const root = createRoot(document.getElementById("root"));
+        const sandpackComponent = React.createElement(
+          Sandpack,
+          { template: "react" },
+          null
+        );
+        root.render(sandpackComponent);
+      </script>
+       -->
 </head>
 <body>
 
-    <!-- <div><h3>Just testing <span id="name">Your name</span></h3></div>
-    <div class="main">
-        <h1 class="main-header">Стань программистом и заработай свои первые деньги за 3 дня! (мейн оффер)</h1>
-        <p>Получи концентрированный опыт программистов с 7 летним опытом, которые за тебя прошли этот путь </p>
-        <button class="main-button">Хочу участвовать</button>
-    </div> -->
+    <!-- <div id="root"></div> -->
+
+    
+    
 
     <div class="first-section">
         <div class="right-first">
@@ -31,8 +56,8 @@
     <div class="bootcamp-invitation">
         <h2>УЧАСТВУЙ В БУТКЕМПЕ, ЕСЛИ ТЫ:</h2>
 
-        <div class="invitation-section-card">
-           <div class="invitation-card">
+        <div class="options-container" >
+           <div class="option" onclick="showStudentContent()">
 
             <b>Студент, хочешь научится программированию и начать зарабатывать </b>
             
@@ -40,7 +65,7 @@
                         
            </div>
 
-           <div class="invitation-card">
+           <div class="option" onclick="showJuniorContent()">
 
             <b>Начинающий программист (Junior)</b>
 
@@ -49,8 +74,8 @@
            </div>
         </div>
 
-        <div class="change-card">
-            <div>
+        <div class="animation-container" id="studentContent">
+            <div class="cards">
 
                 <b>Быстрый Старт</b>
 
@@ -58,14 +83,14 @@
 
             </div>
 
-            <div>
+            <div class="cards">
 
                 <b>Поддержка</b>
 
                 <p>Получишь поддержку от 100 таких же студентов, как и ты!</p>
             </div>
 
-            <div>
+            <div class="cards">
 
                 <b>Деньги</b>
 
@@ -74,23 +99,23 @@
             </div>
         </div>
 
-        <div class="change-card">
+        <div class="animation-container" id="juniorContent">
 
-            <div>
+            <div class="cards">
 
                 <b>Работа</b>
 
                 <p>Научись привлекать заказчиков и проекты, заработай первые деньги (за 3 дня)!</p>
 
             </div>
-            <div>
+            <div class="cards">
 
                 <b>Поддержка</b>
 
                 <p>Получишь поддержку от 100 таких же студентов, как и ты!</p>
 
             </div>
-            <div>
+            <div class="cards">
 
                 <b>Деньги</b>
 
@@ -140,7 +165,7 @@
 
     <div class="student-case-section">
         
-        <h2>Наши кейсы, и показать людям сколько они могут заработать.</h2>
+        <h2 class="all-b">Наши кейсы, и показать людям сколько они могут заработать.</h2>
     
         <div class="cases-student">
             <div class="student-case-card">
@@ -148,7 +173,6 @@
                 <b>info</b>
                 <p>чего добился</p>
             </div>
-    
             <div class="student-case-card">
                 <img src="" alt="">
                 <b>info</b>
@@ -185,33 +209,59 @@
     </div>
 
     <div class="job-openings-section">
-        <div>Показать количество компаний которым нужны программисты, и сколько они УЖЕ недозарабатывают </div>
+        <div class="all-b">Показать количество компаний которым нужны программисты, и сколько они УЖЕ недозарабатывают </div>
 
         <img id="img-job-openings" src="./Image/Снимок экрана 2024-02-18 151128.png" alt="">
 
-        <div>Как можешь увидеть, только в казахстане более 2 200 вакансий компаний, которые ищут программиста к себе, вот несколько из них:</div>
+        <div class="all-b">Как можешь увидеть, только в казахстане более 2 200 вакансий компаний, которые ищут программиста к себе, вот несколько из них:</div>
     
+        <div class="job-kz job-all">
+            <img src="./Image/kz_.png" alt="">
+            <img src="./Image/kz_1.png" alt="">
+            <img src="./Image/kz_3.png" alt="">
+            <img src="./Image/kz_5.png" alt=""><img src="" alt="">
+        </div>
+
+        <div class="all-b">
+            (И это только в Казахстане) <br>
+            А если брать весь мир: 
+        </div>
+
+        <div class="job-world job-all">
+            <img src="./Image/all_1.png" alt="">
+            <img src="./Image/all_2.png" alt="">
+            <img src="./Image/all_3.png" alt="">
+            <img src="./Image/all_4.png" alt="">
+            <img src="./Image/all_5.png" alt="">
+            <img src="./Image/all_6.png" alt="">
+        </div>
     </div>
 
-    <!-- <div>
-        <b>А теперь представь, если бы ты начал программирование пару лет назад, сколько бы ты зарабатывал?</b>
-        
-        <input type="range" min="0" max="100" value="50" step="0">
 
+    <div class="input-section">
+        <div id="slider-container">
+            <label for="year-slider">Выберите год:</label>
+            <input type="range" min="2005" max="2024" step="1" value="2024" id="year-slider">
+            <div id="result"></div>
+
+        </div>
+        <script src="input.js"></script>
+    </div>
+    
+
+    <!-- <div id="task-reduce-amount">
+        <div id="tasks-container">
+            <div id="repost-task">
+              <label for="repost-checkbox">Сделайте репост:</label>
+              <input type="checkbox" id="repost-checkbox">
+            </div>
+            <button onclick="checkTasks()">Проверить задания</button>
+            <div id="result"></div>
+        </div>
+        <script src="task.js"></script>
     </div>
 
-    <div>Чему мы учим, какими мы выпускаем учеников (сделать до/после, связать с греческой мифологией, необязательно)
-        <br>
-        даже если не обьязательно постараемся
-    </div>
-
-    <div>
-        Сделать задания чтобы снизить цену буткемпа, например, основная цена 9К, сделай репост, и приведи вместе с собой друга, если выполнит -4000тг, и сделай репост к себе в сторис, с отметкой инсты - 500тг (хочу дать мозгу клиента дофамин, вот он выполнил задания, сделал игру, вот тебе вознаграждение, получи скидку)
-        <br>Это прикольная идея, я ее подумаю как сделать
-        <br>Еще бы понять как выглядеть должен и какие слова добавить...
-    </div>
-
-    если что это только структура, дальше по дизайну все измениться, или я сам сделаю, если терпение закончиться -->
+    если что это только структура, дальше по дизайну все измениться, или я сам сделаю, если терпение закончиться --> -->
 
     <script src="script.js"></script>
 </body>

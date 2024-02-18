@@ -3,3 +3,34 @@
 // var nameElement = document.getElementById("name");
 
 //   nameElement.textContent = nameUser;
+
+
+function showStudentContent() {
+    document.getElementById('studentContent').style.display = 'flex';
+    document.getElementById('studentContent').style.width = '100%';
+    document.getElementById('studentContent').style.paddingTop = '75px';
+    document.getElementById('studentContent').style.justifyContent = 'space-between';
+    document.getElementById('studentContent').style.flexDirection = 'row';
+    document.getElementById('juniorContent').style.display = 'none';
+}
+
+function showJuniorContent() {
+    document.getElementById('studentContent').style.display = 'none';
+    document.getElementById('juniorContent').style.display = 'flex';
+    document.getElementById('juniorContent').style.width = '100%';
+    document.getElementById('juniorContent').style.paddingTop = '75px';
+    document.getElementById('juniorContent').style.justifyContent = 'space-between';
+    document.getElementById('juniorContent').style.flexDirection = 'row';
+}
+
+// .change-card {
+//     padding-top: 75px;
+//     width: 100%;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+// }
+
+function showWeStudents() {
+    document.getElementById('caseStudent').style.textAlign = 'Hello boys';
+}
