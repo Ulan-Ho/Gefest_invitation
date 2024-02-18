@@ -22,12 +22,3 @@ function showJuniorContent() {
     document.getElementById('juniorContent').style.justifyContent = 'space-between';
     document.getElementById('juniorContent').style.flexDirection = 'row';
 }
-
-// .change-card {
-//     padding-top: 75px;
-//     width: 100%;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-// }
-
