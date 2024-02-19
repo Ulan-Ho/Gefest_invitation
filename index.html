@@ -34,7 +34,7 @@
             files: {
             "FirstGame.js": {code:`import React from 'react';
 
-export default function FirstGame() {
+export default () =>{
     return (
     <div className="bg-gray-50">
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
@@ -67,7 +67,7 @@ export default function FirstGame() {
     active:true},
     "SecondGame.js":`export default () => "return <h1>Hello Sandpack</h1>";`,
             },
-    customSetup:{entry:'\FirstGame.js'},
+    customSetup:{entry:'/FirstGame.js'},
     template: "react"},
         null
         );
