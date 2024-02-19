@@ -32,7 +32,7 @@
             options:{
         externalResources: ["https://cdn.tailwindcss.com"]},
             files: {
-            "/FirstGame.js": `import React from 'react';
+            "/FirstGame.js": {code:`import React from 'react';
 
 export default function FirstGame() {
     return (
@@ -64,6 +64,7 @@ export default function FirstGame() {
     </div>
   )
     }`,
+    active:true,},
     "SecondGame.js":`export default () => "";`,
             },
             template: "react"
