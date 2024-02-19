@@ -21,18 +21,62 @@ a {
 
 /*-----------------------------------First section--------------------------------------------------------------------------------------*/
 .first-section {
+    max-width:1440px;
+    margin: auto;
     display: flex;
     padding: 100px;
     align-items: center;
+    justify-content: center;
 }
 
 .right-first {
-    width: 60%;
+    width: 80%;
 }
 
-.right-first > p {
+/* .right-first > p {
     font-size: 24px;
     font-weight: 400;
+} */
+
+.big-text{
+    font-size: 85px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-weight: normal;
+    color:#FFFAFA
+}
+
+.big-middle-text{
+    font-size: 50px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+    color:#FFFAFA
+}
+
+.middle-text{
+    font-size: 30px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+}
+
+.text-border{
+    border-width: 1px 1px 1px 1px;
+    border-style:solid none solid none;
+    border-color:#C0C0C0 #C0C0C0 #C0C0C0 #C0C0C0;
+}
+
+.text-background-white{
+    padding: 4px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    border:3px solid #DCDCDC;
+    color:black;
+    font-style: italic;
+    /* box-shadow: 5px 5px 1px #ddd; */
+
 }
 
 .left-first {
