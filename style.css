@@ -69,11 +69,11 @@ a {
 
 .text-background-white{
     padding: 4px;
-    background-color: white;
+    background-color: #74C048;
     border-radius: 10px;
     text-align: center;
-    border:3px solid #DCDCDC;
-    color:black;
+    border:3px solid white;
+    color: black;
     font-style: italic;
     /* box-shadow: 5px 5px 1px #ddd; */
 
