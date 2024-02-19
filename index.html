@@ -66,6 +66,18 @@ export default () =>{
     }`,
     active:true},
     "/SecondGame.js":`export default () => "return <h1>Hello Sandpack</h1>";`,
+    "/index.js":`import React, { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./styles.css";
+
+import FirstGame from "./FirstGame";
+
+const root = createRoot(document.getElementById("root"));
+root.render(
+  <StrictMode>
+    <FirstGame />
+  </StrictMode>
+);`
             },
     customSetup:{entry:"/index.js"},
     template: "react"},
