@@ -68,8 +68,8 @@ export default function FirstGame() {
     hidden: false},
     "SecondGame.js":`export default () => "";`,
             },
-            template: "react"
-        },
+    customSetup:{entry:'/FirstGame.js'},
+    template: "react"},
         null
         );
         root.render(sandpackComponent);
