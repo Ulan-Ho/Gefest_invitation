@@ -73,231 +73,231 @@ export default function App() {
 </head>
 <body>
 
-    <div class="first-section">
-        <div class="right-first">
-            <h2>Играй по новым правилам!</h2>
+            <div class="first-section">
+            <div class="right-first">
+                <h2>Играй по новым правилам!</h2>
+                <p>
+                    Время новых возможностей в IT!
+                    Узнай, как эффективно использовать их на нашем “Буткемпе”
+                </p>
+            </div>
+            <div class="left-first">
+                <img src="./Image/image 4.png" alt="">
+            </div>
+        </div>
+
+        <div class="bootcamp-invitation">
+            <h2>УЧАСТВУЙ В БУТКЕМПЕ, ЕСЛИ ТЫ:</h2>
+
+            <div class="options-container">
+            <div class="option" onclick="showStudentContent()">
+
+                <b>Студент, хочешь научится программированию и начать зарабатывать </b>
+                
+                <p>но не понимаешь с чего начать, как это устроено, какой язык выбрать, как продавать</p>
+                            
+            </div>
+
+            <div class="option" onclick="showJuniorContent()" >
+
+                <b>Начинающий программист (Junior)</b>
+
+                <p>но ты не знаешь как эффективно работать, не можешь найти проекты или работы</p>
+
+            </div>
+            </div>
+
+            <div class="animation-container visible-element" id="studentContent">
+                <div class="cards">
+
+                    <b>Быстрый Старт</b>
+
+                    <p>Выбери свой первый язык программирования и создай свой первый проект, за 3 дня!</p>
+
+                </div>
+
+                <div class="cards">
+
+                    <b>Поддержка</b>
+
+                    <p>Получишь поддержку от 100 таких же студентов, как и ты!</p>
+                </div>
+
+                <div class="cards">
+
+                    <b>Деньги</b>
+
+                    <p>Предоставим готовые инструменты, которые помогут тебе привлечь первых заказчиков, и сделать продажу!</p>
+
+                </div>
+            </div>
+
+            <div class="animation-container" id="juniorContent">
+
+                <div class="cards">
+
+                    <b>Работа</b>
+
+                    <p>Научись привлекать заказчиков и проекты, заработай первые деньги (за 3 дня)!</p>
+
+                </div>
+                <div class="cards">
+
+                    <b>Поддержка</b>
+
+                    <p>Получишь поддержку от 100 таких же студентов, как и ты!</p>
+
+                </div>
+                <div class="cards">
+
+                    <b>Деньги</b>
+
+                    <p>Предоставим готовые инструменты, которые помогут тебе привлечь первых заказчиков, и сделать продажу </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="history-gefest">
+
+            <img src="./Image/Default_Picture_Hephaestus_forging_his_best_creation_the_lette_0.jpg" alt="">
+
             <p>
-                Время новых возможностей в IT!
-                Узнай, как эффективно использовать их на нашем “Буткемпе”
+                <b>
+                    В давние времена, когда мир преображался под дыханием божественного творчества, каждый мастер своего дела находил вдохновение в силах Гефеста. Сегодня же, благодаря вашему решению отправиться в путешествие по миру кодирования, вы становитесь частью этого великого наследия. <br>
+
+                    Преодолевая трудности и преодолевая препятствия, вы направляетесь в виртуальные кузницы Гефеста на нашем сайте. Здесь вы будете проводить свое собственное творческое таинство, создавая свои первые строки кода и зачаровывая мир своей собственной игрой. <br>            
+                    
+                    Итак, погрузитесь в этот мир возможностей и откройте для себя свои таланты, ведь вас ждет не только увлекательное путешествие, но и возможность воплотить в жизнь свои самые смелые идеи в виде собственной игры, прямо здесь, на нашем сайте. <br>
+            
+                </b>
+            </p>
+
+        </div>
+
+
+        <div class="bootcamp-information-section">
+            <b>О буткэмпе, чему мы там учим?</b>
+
+            <p>
+                Зачем рассказывать о том, чему вы научитесь за 3 дня, если мы можем показать наглядно? :) 
+                Тем более, читать бы вам пришлось очень долго, так как мы учим людей продавать уже на 2 день обучения!
             </p>
         </div>
-        <div class="left-first">
-            <img src="./Image/image 4.png" alt="">
+
+
+        <div class="game-section">
+            <div id="root"></div>
         </div>
-    </div>
+        <!-- <div class="sandbox-game"  id="app">Мини игра которую они сами сделают (2минуты)</div>
 
-    <div class="bootcamp-invitation">
-        <h2>УЧАСТВУЙ В БУТКЕМПЕ, ЕСЛИ ТЫ:</h2>
+        <div>Игра чуть труднее (3 минут)</div>
 
-        <div class="options-container" >
-           <div class="option" onclick="showStudentContent()">
+        <div>Игра которую мы сами сделали (Написанный код, который они могут посмотреть, как круто мы сделали)</div>
 
-            <b>Студент, хочешь научится программированию и начать зарабатывать </b>
+        <div>Чат бот который мы сделали, могут позадавать вопросы, пообщаться
+        </div> -->
+
+        <div class="student-case-section">
             
-            <p>но не понимаешь с чего начать, как это устроено, какой язык выбрать, как продавать</p>
-                        
-           </div>
-
-           <div class="option" onclick="showJuniorContent()">
-
-            <b>Начинающий программист (Junior)</b>
-
-            <p>но ты не знаешь как эффективно работать, не можешь найти проекты или работы</p>
-
-           </div>
-        </div>
-
-        <div class="animation-container" id="studentContent">
-            <div class="cards">
-
-                <b>Быстрый Старт</b>
-
-                <p>Выбери свой первый язык программирования и создай свой первый проект, за 3 дня!</p>
-
-            </div>
-
-            <div class="cards">
-
-                <b>Поддержка</b>
-
-                <p>Получишь поддержку от 100 таких же студентов, как и ты!</p>
-            </div>
-
-            <div class="cards">
-
-                <b>Деньги</b>
-
-                <p>Предоставим готовые инструменты, которые помогут тебе привлечь первых заказчиков, и сделать продажу!</p>
-
-            </div>
-        </div>
-
-        <div class="animation-container" id="juniorContent">
-
-            <div class="cards">
-
-                <b>Работа</b>
-
-                <p>Научись привлекать заказчиков и проекты, заработай первые деньги (за 3 дня)!</p>
-
-            </div>
-            <div class="cards">
-
-                <b>Поддержка</b>
-
-                <p>Получишь поддержку от 100 таких же студентов, как и ты!</p>
-
-            </div>
-            <div class="cards">
-
-                <b>Деньги</b>
-
-                <p>Предоставим готовые инструменты, которые помогут тебе привлечь первых заказчиков, и сделать продажу </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="history-gefest">
-
-        <img src="./Image/Default_Picture_Hephaestus_forging_his_best_creation_the_lette_0.jpg" alt="">
-
-        <p>
-            <b>
-                В давние времена, когда мир преображался под дыханием божественного творчества, каждый мастер своего дела находил вдохновение в силах Гефеста. Сегодня же, благодаря вашему решению отправиться в путешествие по миру кодирования, вы становитесь частью этого великого наследия. <br>
-
-                Преодолевая трудности и преодолевая препятствия, вы направляетесь в виртуальные кузницы Гефеста на нашем сайте. Здесь вы будете проводить свое собственное творческое таинство, создавая свои первые строки кода и зачаровывая мир своей собственной игрой. <br>            
-                
-                Итак, погрузитесь в этот мир возможностей и откройте для себя свои таланты, ведь вас ждет не только увлекательное путешествие, но и возможность воплотить в жизнь свои самые смелые идеи в виде собственной игры, прямо здесь, на нашем сайте. <br>
+            <h2 class="all-b">Наши кейсы, и показать людям сколько они могут заработать.</h2>
         
-            </b>
-        </p>
-
-    </div>
-
-
-    <div class="bootcamp-information-section">
-        <b>О буткэмпе, чему мы там учим?</b>
-
-        <p>
-            Зачем рассказывать о том, чему вы научитесь за 3 дня, если мы можем показать наглядно? :) 
-            Тем более, читать бы вам пришлось очень долго, так как мы учим людей продавать уже на 2 день обучения!
-        </p>
-    </div>
-
-
-    <div class="game-section">
-        <div id="root"></div>
-    </div>
-    <!-- <div class="sandbox-game"  id="app">Мини игра которую они сами сделают (2минуты)</div>
-
-    <div>Игра чуть труднее (3 минут)</div>
-
-    <div>Игра которую мы сами сделали (Написанный код, который они могут посмотреть, как круто мы сделали)</div>
-
-    <div>Чат бот который мы сделали, могут позадавать вопросы, пообщаться
-    </div> -->
-
-    <div class="student-case-section">
+            <div class="cases-student">
+                <div class="student-case-card">
+                    <img src="" alt="">
+                    <b>info</b>
+                    <p>чего добился</p>
+                </div>
+                <div class="student-case-card">
+                    <img src="" alt="">
+                    <b>info</b>
+                    <p>чего добился</p>
+                </div class="student-case-card">
         
-        <h2 class="all-b">Наши кейсы, и показать людям сколько они могут заработать.</h2>
-    
-        <div class="cases-student">
-            <div class="student-case-card">
-                <img src="" alt="">
-                <b>info</b>
-                <p>чего добился</p>
-            </div>
-            <div class="student-case-card">
-                <img src="" alt="">
-                <b>info</b>
-                <p>чего добился</p>
-            </div class="student-case-card">
-    
-            <div class="student-case-card">
-                <img src="" alt="">
-                <b>info</b>
-                <p>чего добился</p>
-            </div>
-    
-            <div class="student-case-card">
-                <img src="" alt="">
-                <b>info</b>
-                <p>чего добился</p>
-            </div>
-    
-            <div class="student-case-card">
-                <img src="" alt="">
-                <b>info</b>
-                <p>чего добился</p>
-            </div>
-    
-            <div class="student-case-card">
-                <img src="" alt="">
-                <b>info</b>
-                <p>чего добился</p>
-            </div>
-
-        </div>
-
-
-    </div>
-
-    <div class="job-openings-section">
-        <div class="all-b">Показать количество компаний которым нужны программисты, и сколько они УЖЕ недозарабатывают </div>
-
-        <img id="img-job-openings" src="./Image/Снимок экрана 2024-02-18 151128.png" alt="">
-
-        <div class="all-b">Как можешь увидеть, только в казахстане более 2 200 вакансий компаний, которые ищут программиста к себе, вот несколько из них:</div>
-    
-        <div>Kazahstan</div>
-        <div>World</div>
-        <div class="job-kz job-all">
-            <img src="./Image/kz_.png" alt="">
-            <img src="./Image/kz_1.png" alt="">
-            <img src="./Image/kz_3.png" alt="">
-            <img src="./Image/kz_5.png" alt=""><img src="" alt="">
-        </div>
-
-        <div class="all-b">
-            (И это только в Казахстане) <br>
-            А если брать весь мир: 
-        </div>
-
-        <div class="job-world job-all">
-            <img src="./Image/all_1.png" alt="">
-            <img src="./Image/all_2.png" alt="">
-            <img src="./Image/all_3.png" alt="">
-            <img src="./Image/all_4.png" alt="">
-            <img src="./Image/all_5.png" alt="">
-            <img src="./Image/all_6.png" alt="">
-        </div>
-    </div>
-
-
-    <div class="input-section">
-        <div id="slider-container">
-            <label for="year-slider">Выберите год:</label>
-            <input type="range" min="2005" max="2024" step="1" value="2024" id="year-slider">
-            <div id="result"></div>
-
-        </div>
-        <script src="input.js"></script>
-    </div>
-    
-
-    <div class="payment-section">
-
-        <div class="payment-button">
-
-            <a href="https://pay.kaspi.kz/pay/m4htfvle" target="_blank">Хочу участвовать в буткемпе</a>
+                <div class="student-case-card">
+                    <img src="" alt="">
+                    <b>info</b>
+                    <p>чего добился</p>
+                </div>
         
+                <div class="student-case-card">
+                    <img src="" alt="">
+                    <b>info</b>
+                    <p>чего добился</p>
+                </div>
+        
+                <div class="student-case-card">
+                    <img src="" alt="">
+                    <b>info</b>
+                    <p>чего добился</p>
+                </div>
+        
+                <div class="student-case-card">
+                    <img src="" alt="">
+                    <b>info</b>
+                    <p>чего добился</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="job-openings-section">
+            <div class="all-b">Показать количество компаний которым нужны программисты, и сколько они УЖЕ недозарабатывают </div>
+
+            <img id="img-job-openings" src="./Image/Снимок экрана 2024-02-18 151128.png" alt="">
+
+            <div class="all-b">Как можешь увидеть, только в казахстане более 2 200 вакансий компаний, которые ищут программиста к себе, вот несколько из них:</div>
+        
+            <div>Kazahstan</div>
+            <div>World</div>
+            <div class="job-kz job-all">
+                <img src="./Image/kz_.png" alt="">
+                <img src="./Image/kz_1.png" alt="">
+                <img src="./Image/kz_3.png" alt="">
+                <img src="./Image/kz_5.png" alt=""><img src="" alt="">
+            </div>
+
+            <div class="all-b">
+                (И это только в Казахстане) <br>
+                А если брать весь мир: 
+            </div>
+
+            <div class="job-world job-all">
+                <img src="./Image/all_1.png" alt="">
+                <img src="./Image/all_2.png" alt="">
+                <img src="./Image/all_3.png" alt="">
+                <img src="./Image/all_4.png" alt="">
+                <img src="./Image/all_5.png" alt="">
+                <img src="./Image/all_6.png" alt="">
+            </div>
+        </div>
+
+
+        <div class="input-section">
+            <div id="slider-container">
+                <label for="year-slider">Выберите год:</label>
+                <input type="range" min="2005" max="2024" step="1" value="2024" id="year-slider">
+                <div id="result"></div>
+
+            </div>
+            <script src="input.js"></script>
         </div>
         
-    </div>
 
+        <div class="payment-section">
+
+            <div class="payment-button">
+
+                <a href="https://pay.kaspi.kz/pay/m4htfvle" target="_blank">Хочу участвовать в буткемпе</a>
+            
+            </div>
+            
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

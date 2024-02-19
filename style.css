@@ -10,7 +10,11 @@ a {
     color: red;
 }
 
-
+.gif-size {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
 /*------------------------------------------Beta--------------------------------------------------*/
 
 
@@ -79,6 +83,15 @@ a {
 .animation-container {
     display: none;
     animation: fadeIn 0.5s ease-in-out;
+
+}
+
+.visible-element{
+    display: flex;
+    width: 100%;
+    padding-top: 75px;
+    justify-content: space-between;
+    flex-direction: row;
 
 }
 
