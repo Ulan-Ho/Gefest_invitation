@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gefest invitation</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylePhone.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
     <script type="importmap">
@@ -25,18 +26,18 @@
         const root = createRoot(document.getElementById("root"));
         const sandpackComponent = React.createElement(
           Sandpack,
-          { template: "react" },
+          { template: "react",
+          files:{
+        "/App.js": `export default function App() {
+  return <h1>Hello Sandpack</h1>
+        }`
+    }},
           null
-        );
+          );
         root.render(sandpackComponent);
       </script>
 </head>
 <body>
-
-    <div id="root"></div>
-
-    
-    
 
     <div class="first-section">
         <div class="right-first">
@@ -152,6 +153,11 @@
         </p>
     </div>
 
+
+    <div class="game-section">
+        <!-- <div id="root"></div> -->
+        <script src="sandPack.js"></script>
+    </div>
     <!-- <div class="sandbox-game"  id="app">Мини игра которую они сами сделают (2минуты)</div>
 
     <div>Игра чуть труднее (3 минут)</div>
@@ -249,19 +255,15 @@
     </div>
     
 
-    <!-- <div id="task-reduce-amount">
-        <div id="tasks-container">
-            <div id="repost-task">
-              <label for="repost-checkbox">Сделайте репост:</label>
-              <input type="checkbox" id="repost-checkbox">
-            </div>
-            <button onclick="checkTasks()">Проверить задания</button>
-            <div id="result"></div>
-        </div>
-        <script src="task.js"></script>
-    </div>
+    <div class="payment-section">
 
-    если что это только структура, дальше по дизайну все измениться, или я сам сделаю, если терпение закончиться --> -->
+        <div class="payment-button">
+
+            <a href="https://pay.kaspi.kz/pay/m4htfvle" target="_blank">Хочу участвовать в буткемпе</a>
+        
+        </div>
+        
+    </div>
 
     <script src="script.js"></script>
 </body>

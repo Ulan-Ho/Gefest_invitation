@@ -8,7 +8,7 @@ function updateResult() {
     const baseSalary = 400000; // минимальная зарплата в тенге
     const salaryIncrease = 240000; // увеличение зарплаты за каждый год
 
-    const totalSalary = baseSalary + (selectedYear - 2005) * salaryIncrease;
+    const totalSalary = baseSalary - (selectedYear - 2024) * salaryIncrease;
     const totalSalaryUSD = totalSalary / 420; // примерный курс валюты
 
     resultDiv.innerHTML = `

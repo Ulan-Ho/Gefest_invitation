@@ -3,8 +3,11 @@ body {
     margin: 0;
     color: white;
     font-size: 26;
+}
 
-    
+a {
+    text-decoration: none;
+    color: red;
 }
 
 
@@ -17,7 +20,6 @@ body {
     display: flex;
     padding: 100px;
     align-items: center;
-    height: 30vh;
 }
 
 .right-first {
@@ -37,6 +39,7 @@ body {
 
 .left-first > img {
     padding-left: 100px; 
+    padding-top: 0;
     width: 400px;
     height: 400px;
 }
@@ -229,6 +232,17 @@ body {
     
 }
 
+
+/*-----------------------------------Game section--------------------------------------------------------------------------------------*/
+
+.game-section {
+    padding: 100px;
+}
+
+
+.mini-game {
+
+}
 /*-----------------------------------job openings section--------------------------------------------------------------------------------------*/
 
 .job-openings-section {
@@ -280,27 +294,28 @@ body {
 }
 
 
-/*-----------------------------------Task reduce Amount--------------------------------------------------------------------------------------*/
+/*-----------------------------------payment section--------------------------------------------------------------------------------------*/
 
-#task-reduce-amount {
+
+.payment-section {
     padding: 100px;
-    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 20vh;
+    justify-content: center;
+    width: 90%;
+    
 }
 
-#tasks-container {
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
+.payment-button {
+    padding: 25px;
+    background-color: rgb(33, 193, 22);
+    border-radius: 15px;
 }
 
-#repost-task {
-    margin-top: 20px;
-}
 
-#result {
-    margin-top: 20px;
+
+/*-----------------------------------Smart phone--------------------------------------------------------------------------------------*/
+
+@media (max-width: 414px) {
+    
 }
