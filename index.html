@@ -27,13 +27,12 @@
         const sandpackComponent = React.createElement(
         Sandpack,
         {
-            template: "react",
             options:{
         externalResources: ["https://cdn.tailwindcss.com"]},
             files: {
-            "/App.js": `import React from 'react';
+            "/FirstGame.js": `import React from 'react';
 
-export default function App() {
+export default function FirstGame() {
     return (
     <div className="bg-gray-50">
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
@@ -62,8 +61,10 @@ export default function App() {
       </div>
     </div>
   )
-    }`
+    }`,
+    "SecondGame.js":`export default () => "";`
             },
+            template: "react"
         },
         null
         );
