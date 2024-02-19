@@ -28,25 +28,48 @@
         Sandpack,
         {
             template: "react",
+            options:{
+        externalResources: ["https://cdn.tailwindcss.com"]},
             files: {
-            "/App.js": `
-                import React from 'react';
+            "/App.js": `import React from 'react';
 
-                export default function App() {
-                return (
-                    <div>
-                    <h1>Hello Sandpack</h1>
-                    <p>This is a modified content.</p>
-                    </div>
-                );
-                }
-            `,
+export default function App() {
+    return (
+    <div className="bg-gray-50">
+      <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <span className="block">Ready to dive in?</span>
+          <span className="block text-emerald-400">Start your free trial today.</span>
+        </h2>
+        <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+          <div className="inline-flex rounded-md shadow">
+            <a
+              href="#"
+              className="inline-flex items-center justify-center rounded-md border border-transparent bg-emerald-400 px-5 py-3 text-base font-medium text-white hover:bg-emerald-600"
+            >
+              Get started
+            </a>
+          </div>
+          <div className="ml-3 inline-flex rounded-md shadow">
+            <a
+              href="#"
+              className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-emerald-400 hover:bg-emerald-50"
+            >
+              Learn more
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+    }`
             },
         },
         null
         );
         root.render(sandpackComponent);
       </script>
+
 </head>
 <body>
 
