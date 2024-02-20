@@ -104,6 +104,8 @@ a {
 /*-----------------------------------Bootcamp invitation--------------------------------------------------------------------------------------*/
 
 .bootcamp-invitation {
+    max-width:1440px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     height: 50vh;
@@ -135,6 +137,8 @@ a {
 }
 
 .animation-container {
+    max-width:1440px;
+    margin: auto;
     display: none;
     animation: fadeIn 0.5s ease-in-out;
 
@@ -251,6 +255,8 @@ a {
 /*-----------------------------------History Gefest--------------------------------------------------------------------------------------*/
 
 .history-gefest {
+    max-width:1440px;
+    margin: auto;
     margin-top:50px;
     padding: 50px 100px;
     display: flex;
