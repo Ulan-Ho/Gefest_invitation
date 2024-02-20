@@ -4,7 +4,13 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 
 const root = createRoot(document.getElementById("root"));
 
-
-    <Sandpack template="static" />
+const sandpackComponent = (
+  <Sandpack
+    template="static"
+    options={{
+      externalResources: ["https://cdn.tailwindcss.com"]
+    }}
+  />
+);
 
 root.render(sandpackComponent);
