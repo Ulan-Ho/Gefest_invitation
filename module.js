@@ -5,7 +5,11 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 const root = createRoot(document.getElementById("root"));
 const sandpackComponent = React.createElement(
 Sandpack,
-{ template: "react" },
+{ template: "react",
+files:{
+    "/App.js": `export default function App() {
+return <h1>Hello Sandpack</h1>
+}`}},
 null
 );
 root.render(sandpackComponent);
