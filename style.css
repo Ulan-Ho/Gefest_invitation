@@ -46,6 +46,10 @@ a {
     color:#FFFAFA
 }
 
+.text-italic{
+    font-style: italic;
+}
+
 .big-middle-text{
     font-size: 50px;
     text-align: center;
@@ -114,7 +118,7 @@ a {
 }
 
 .bootcamp-invitation > h2 {
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 900;
 }
 
@@ -275,35 +279,56 @@ a {
 /*-----------------------------------Boot information section--------------------------------------------------------------------------------------*/
 
 .bootcamp-information-section {
+    max-width:1440px;
+    margin: auto;
     padding: 100px;
 }
-
-.bootcamp-information-section > b {
-    font-size: 40px;
-    font-weight: 700;
+.green{
+    color:#74C048;
+    font-style: italic;
+}
+.text-overline{
+    text-decoration:overline;
 }
 
+.text-underline{
+    text-decoration:underline;
+}
+
+/* .bootcamp-information-section > b {
+    font-size: 40px;
+    font-weight: 700;
+} */
+
 .bootcamp-information-section > p {
-    font-size: 24px;
-    font-weight: 400;
+    text-align: left;
+    font-weight: 300;
 }
 
 /*-----------------------------------Boot information section--------------------------------------------------------------------------------------*/
 
 .student-case-section {
+    max-width:1440px;
+    margin: auto;
     padding: 100px;
     display: flex;
     flex-direction: column;
 }
+.student-case-section > h2{
+    font-size: 60px;
+}
 
 .cases-student {
+    justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
 .student-case-card {
-    
+    border:2px dashed white;
+    border-radius: 10px;
+    font-size: 30px;
 }
 
 
@@ -346,8 +371,11 @@ a {
 }
 
 .all-b {
-    font-size: 40px;
-    font-weight: 700;
+    font-size: 85px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-weight: normal;
+    color:#FFFAFA
 }
 
 
