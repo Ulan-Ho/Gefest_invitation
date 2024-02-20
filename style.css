@@ -110,6 +110,7 @@ a {
 .options-container {
     display: flex;
     gap: 20px;
+    justify-content: space-around;
 }
 
 .option {
@@ -118,6 +119,7 @@ a {
     border: 2px solid #74C048;
     border-radius: 5px;
     transition: background-color 0.3s;
+    font-size: 26px;
 }
 
 .option:hover {
@@ -131,12 +133,10 @@ a {
 }
 
 .visible-element{
-    display: flex;
     width: 100%;
     padding-top: 75px;
     justify-content: space-between;
     flex-direction: row;
-
 }
 
 @keyframes fadeIn {
@@ -306,20 +306,33 @@ a {
     padding: 100px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
 }
+
+.container-img-job{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 #img-job-openings {
-    width: 100%;
-
+    width: 60%;
+    padding: 25px;
 }
 
-.job-all > img{
+.job-button {
+    margin-top: 50px;
+    font-size: 40px;
+    padding: 50px 100px;
 }
 
 .all-b {
     font-size: 40px;
     font-weight: 700;
 }
+
 
 /*-----------------------------------input section--------------------------------------------------------------------------------------*/
 

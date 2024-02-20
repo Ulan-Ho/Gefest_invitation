@@ -43,3 +43,19 @@ function showJuniorContent() {
     document.getElementById('juniorContent').style.justifyContent = 'space-between';
     document.getElementById('juniorContent').style.flexDirection = 'row';
 }
+
+function showKzContent() {
+    document.getElementById('kzContent').style.display = 'flex';
+    document.getElementById('kzContent').style.flexWrap = 'wrap';
+    document.getElementById('kzContent').style.gap = '1px';
+    document.getElementById('kzContent').style.justifyContent = 'start'
+    document.getElementById('worldContent').style.display = 'none';
+}
+
+function showWorldContent() {
+    document.getElementById('worldContent').style.display = 'flex';
+    document.getElementById('worldContent').style.flexWrap = 'wrap';
+    document.getElementById('worldContent').style.gap = '1px';
+    document.getElementById('kzContent').style.justifyContent = 'start';    
+    document.getElementById('kzContent').style.display = 'none';
+}

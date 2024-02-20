@@ -34,8 +34,85 @@
             files: {
             "/FirstGame.js": {code:`import React from 'react';
 
+let currentPlayer = 'X'
+let board = [
+    ['', '', ''],
+    ['', '', ''],
+    ['', '', '']
+]
+let gameBoardElement = document.getElementById('gameBoard');
+
+// Create game board
+for (let i = 0; i < 3; i++) {
+    let rowElement = document.createElement('div');
+    rowElement.className = 'row';
+
+    for (let j; j < 3; j++) {
+        let cell = document.createElement('div');
+        cell.className = 'cell';
+        cell.setAttribute('data-row', i);
+        cell.setAttribute('data-cell', j);
+        cell.addEventListener('click', handleCellClick);
+        rowElement.append(cell);
+    }
+
+    gameBoardElement.append(rowElement);
+}
+
+function handleCellClick(event) {
+    let row = event.target.getAttribute('data-row');
+    let col = event.target.getAttribute('data-col');
+
+    if (board[row][col] === '') {
+        board[row][col] == currentPlayer;
+        event.target.textContent = currentPlayer;
+
+        if(chekWin()) {
+            alert("Игрок " + currentPlayer "    выиграл!");
+        } else if (board.every(row => row.every(cell => cell !== ''))) {
+            alert('Ничья!');
+            resetGame();
+        } else {
+            currentPlayer = currentPlayer === 'X' ? 'O' : 'X' ;
+        }
+    }
+}
+
+function checkWin() {
+    let winCombination = [
+        [[0,0], [0,1], [0,2]],
+        [[1,0], [1,1], [1,2]],
+        [[2,0], [2,1], [2,2]],
+
+        [[0,0], [1,0], [2,0]],
+        [[0,1], [1,1], [2,1]],
+        [[0,2], [1,2], [2,2]],
+
+        [[0,0], [1,1], [2,2]],
+        [[0,2], [1,1], [2,0]],
+    ];
+
+    return winCombination.some(combination => {
+        return combination.every(([row, col]) => board[row][col] !== '' && board[row][col] === board[combination[0][0]][combination[0][1]]);
+    });
+}
+
+function resetGame() {
+    currentPlayer = 'X';
+    board = [
+        ['', '', ''],
+        ['', '', ''],
+        ['', '', '']
+    ];
+
+    let cells = document.getElementsByClassName('cell');
+    Array.from(cells).forEach(cell => {
+        cell.textContent = '';
+    });
+}
 export default () =>{
     return (
+<<<<<<< HEAD
     <div className="bg-gray-50">
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -62,6 +139,9 @@ export default () =>{
         </div>
       </div>
     </div>
+=======
+        <div id="gameBoard" class="board"></div>
+>>>>>>> 1e1fb94bf5ae6e8be2d6b0ac7794fed85445072e
   )
     }`,
     active:true},
@@ -106,21 +186,21 @@ root.render(
             <h2 class="big-middle-text text-border">УЧАСТВУЙ В БУТКЕМПЕ, ЕСЛИ ТЫ:</h2>
 
             <div class="options-container">
-            <div class="option" onclick="showStudentContent()">
+                <div class="option" onclick="showStudentContent()">
 
-                <b>Студент, хочешь научится программированию и начать зарабатывать </b>
-                
-                <p>но не понимаешь с чего начать, как это устроено, какой язык выбрать, как продавать</p>
-                            
-            </div>
+                    <b>Студент, хочешь научится программированию и начать зарабатывать </b>
+                    
+                    <p>но не понимаешь с чего начать, как это устроено, какой язык выбрать, как продавать</p>
+                                
+                </div>
 
-            <div class="option" onclick="showJuniorContent()" >
+                <div class="option" onclick="showJuniorContent()" >
 
-                <b>Начинающий программист (Junior)</b>
+                    <b>Начинающий программист (Junior)</b>
 
-                <p>но ты не знаешь как эффективно работать, не можешь найти проекты или работы</p>
+                    <p>но ты не знаешь как эффективно работать, не можешь найти проекты или работы</p>
 
-            </div>
+                </div>
             </div>
 
             <div class="animation-container visible-element" id="studentContent">
@@ -264,25 +344,24 @@ root.render(
         <div class="job-openings-section">
             <div class="all-b">Показать количество компаний которым нужны программисты, и сколько они УЖЕ недозарабатывают </div>
 
-            <img id="img-job-openings" src="./Image/Снимок экрана 2024-02-18 151128.png" alt="">
+            <div class="container-img-job"><img id="img-job-openings" src="./Image/Снимок экрана 2024-02-18 151128.png" alt=""></div>
 
             <div class="all-b">Как можешь увидеть, только в казахстане более 2 200 вакансий компаний, которые ищут программиста к себе, вот несколько из них:</div>
         
-            <div>Kazahstan</div>
-            <div>World</div>
-            <div class="job-kz job-all">
+            <div class="options-container">
+                <div class="option job-button" onclick="showKzContent()">Kazahstan</div>
+                <div class="option job-button" onclick="showWorldContent()">World</div>
+            </div>
+
+            <div class="animation-container visible-element" id="kzContent">
                 <img src="./Image/kz_.png" alt="">
                 <img src="./Image/kz_1.png" alt="">
                 <img src="./Image/kz_3.png" alt="">
                 <img src="./Image/kz_5.png" alt=""><img src="" alt="">
             </div>
 
-            <div class="all-b">
-                (И это только в Казахстане) <br>
-                А если брать весь мир: 
-            </div>
 
-            <div class="job-world job-all">
+            <div class="animation-container visible-element" id="worldContent">
                 <img src="./Image/all_1.png" alt="">
                 <img src="./Image/all_2.png" alt="">
                 <img src="./Image/all_3.png" alt="">
