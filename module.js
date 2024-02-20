@@ -5,90 +5,93 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 const root = createRoot(document.getElementById("root"));
 
 const sandpackComponent = (
-    Sandpack,{ 
-        template: "static",
-        options:{
-            externalResources: ["https://cdn.tailwindcss.com"]},
-                files: {
-                    "/TicTac.js": `let currentPlayer = 'X'
-let board = [
-    ['', '', ''],
-    ['', '', ''],
-    ['', '', '']
-]
-let gameBoardElement = document.getElementById('gameBoard');
+  <Sandpack
+    template="static"
+    options={{
+      externalResources: ["https://cdn.tailwindcss.com"],
+      files: {
+        "/TicTac.js": `
+          let currentPlayer = 'X';
+          let board = [
+            ['', '', ''],
+            ['', '', ''],
+            ['', '', '']
+          ];
 
-// Create game board
-for (let i = 0; i < 3; i++) {
-    let rowElement = document.createElement('div');
-    rowElement.className = 'row';
+          let gameBoardElement = document.getElementById('gameBoard');
 
-    for (let j; j < 3; j++) {
-        let cell = document.createElement('div');
-        cell.className = 'cell';
-        cell.setAttribute('data-row', i);
-        cell.setAttribute('data-cell', j);
-        cell.addEventListener('click', handleCellClick);
-        rowElement.append(cell);
-    }
+          // Create game board
+          for (let i = 0; i < 3; i++) {
+              let rowElement = document.createElement('div');
+              rowElement.className = 'row';
 
-    gameBoardElement.append(rowElement);
-}
+              for (let j = 0; j < 3; j++) {
+                  let cell = document.createElement('div');
+                  cell.className = 'cell';
+                  cell.setAttribute('data-row', i);
+                  cell.setAttribute('data-col', j);
+                  cell.addEventListener('click', handleCellClick);
+                  rowElement.append(cell);
+              }
 
-function handleCellClick(event) {
-    let row = event.target.getAttribute('data-row');
-    let col = event.target.getAttribute('data-col');
+              gameBoardElement.append(rowElement);
+          }
 
-    if (board[row][col] === '') {
-        board[row][col] == currentPlayer;
-        event.target.textContent = currentPlayer;
+          function handleCellClick(event) {
+              let row = event.target.getAttribute('data-row');
+              let col = event.target.getAttribute('data-col');
 
-        if(chekWin()) {
-            alert("Игрок "+ currentPlayer + " выиграл!");
-        } else if (board.every(row => row.every(cell => cell !== ''))) {
-            alert('Ничья!');
-            resetGame();
-        } else {
-            currentPlayer = currentPlayer === 'X' ? 'O' : 'X' ;
-        }
-    }
-}
+              if (board[row][col] === '') {
+                  board[row][col] = currentPlayer;
+                  event.target.textContent = currentPlayer;
 
-function checkWin() {
-    let winCombination = [
-        [[0,0], [0,1], [0,2]],
-        [[1,0], [1,1], [1,2]],
-        [[2,0], [2,1], [2,2]],
+                  if (checkWin()) {
+                      alert("Игрок " + currentPlayer + " выиграл!");
+                  } else if (board.every(row => row.every(cell => cell !== ''))) {
+                      alert('Ничья!');
+                      resetGame();
+                  } else {
+                      currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                  }
+              }
+          }
 
-        [[0,0], [1,0], [2,0]],
-        [[0,1], [1,1], [2,1]],
-        [[0,2], [1,2], [2,2]],
+          function checkWin() {
+              let winCombination = [
+                  [[0, 0], [0, 1], [0, 2]],
+                  [[1, 0], [1, 1], [1, 2]],
+                  [[2, 0], [2, 1], [2, 2]],
 
-        [[0,0], [1,1], [2,2]],
-        [[0,2], [1,1], [2,0]],
-    ];
+                  [[0, 0], [1, 0], [2, 0]],
+                  [[0, 1], [1, 1], [2, 1]],
+                  [[0, 2], [1, 2], [2, 2]],
 
-    return winCombination.some(combination => {
-        return combination.every(([row, col]) => board[row][col] !== '' && board[row][col] === board[combination[0][0]][combination[0][1]]);
-    });
-}
+                  [[0, 0], [1, 1], [2, 2]],
+                  [[0, 2], [1, 1], [2, 0]],
+              ];
 
-function resetGame() {
-    currentPlayer = 'X';
-    board = [
-        ['', '', ''],
-        ['', '', ''],
-        ['', '', '']
-    ];
+              return winCombination.some(combination => {
+                  return combination.every(([row, col]) => board[row][col] !== '' && board[row][col] === board[combination[0][0]][combination[0][1]]);
+              });
+          }
 
-    let cells = document.getElementsByClassName('cell');
-    Array.from(cells).forEach(cell => {
-        cell.textContent = '';
-    });
-}`,
-                }
-    },
-    null
+          function resetGame() {
+              currentPlayer = 'X';
+              board = [
+                  ['', '', ''],
+                  ['', '', ''],
+                  ['', '', '']
+              ];
+
+              let cells = document.getElementsByClassName('cell');
+              Array.from(cells).forEach(cell => {
+                  cell.textContent = '';
+              });
+          }
+        `,
+      },
+    }}
+  />
 );
 
 root.render(sandpackComponent);
