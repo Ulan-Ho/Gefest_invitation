@@ -99,4 +99,19 @@
         margin-top: 40px;
         width: 80%;
     }
+
+    .student-case-section {
+        width: 80%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .student-case-card {
+        font-size: 20px;
+    }
+    .cases-student {
+        justify-content:center;
+        gap: 10px;
+    }
 }
