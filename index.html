@@ -18,8 +18,7 @@
           externalResources: ["https://cdn.tailwindcss.com"],
         },
         files: {
-          "/index.html": `
-            <!DOCTYPE html>
+          "/index.html": `<!DOCTYPE html>
             <html lang="en">
             <head>
                 <meta charset="UTF-8">
@@ -55,7 +54,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-            }`,
+            }`, 
           "/script.js": `
             let currentPlayer = 'X';
             let board = [
@@ -130,7 +129,7 @@
                 Array.from(cells).forEach(cell => {
                     cell.textContent = '';
                 });
-            }`,
+            }`
         },
       });
 
