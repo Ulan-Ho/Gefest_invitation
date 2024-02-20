@@ -78,6 +78,12 @@ a {
     border-style:solid none solid none;
     border-color:#74C048 #74C048 #74C048 #74C048;
 }
+.text-border-bold{
+    border-width: 1px 5px 5px 1px;
+    border-style:none solid solid none;
+    border-color:#74C048 #74C048 #74C048 #74C048;
+    font-weight: 700;
+}
 
 .text-background-white{
     padding: 4px;
@@ -110,7 +116,7 @@ a {
 
 .bootcamp-invitation {
     max-width:1440px;
-    margin: auto;
+    margin: 0px auto;
     display: flex;
     flex-direction: column;
     height: 50vh;
@@ -287,6 +293,9 @@ a {
     color:#74C048;
     font-style: italic;
 }
+.white{
+    color:white;
+}
 .text-overline{
     text-decoration:overline;
 }
@@ -402,6 +411,7 @@ a {
 
     background-color: #74C048;
     border-radius: 20px;
+    border:3px solid white;
     width: 80%;
     max-width: 800px;
     text-align: center;
@@ -421,6 +431,7 @@ a {
 
 
 .payment-section {
+    max-width: 1440px;
     padding: 100px;
     display: flex;
     align-items: center;
@@ -431,7 +442,8 @@ a {
 
 .payment-button {
     padding: 25px;
-    background-color: rgb(33, 193, 22);
+    background-color:white;
+    color:black;
     border-radius: 15px;
 }
 
@@ -459,6 +471,7 @@ a {
   
   #showFormBtn {
     cursor: pointer;
+    color:#74C048
   }
   
 /*-----------------------------------Smart phone--------------------------------------------------------------------------------------*/
