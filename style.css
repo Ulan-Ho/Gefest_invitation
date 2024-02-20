@@ -314,9 +314,9 @@ a {
     display: flex;
     flex-direction: column;
 }
-.student-case-section > h2{
+/* .student-case-section > h2{
     font-size: 60px;
-}
+} */
 
 .cases-student {
     justify-content: space-between;
@@ -345,14 +345,22 @@ a {
 /*-----------------------------------job openings section--------------------------------------------------------------------------------------*/
 
 .job-openings-section {
+    max-width:1440px;
+    margin: auto;
     padding: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
 }
-
+.margin-top{
+    margin-top:70px;
+}
+.text-normal{
+    font-style: normal;
+}
 .container-img-job{
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
