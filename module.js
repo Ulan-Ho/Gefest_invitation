@@ -6,15 +6,24 @@ const root = createRoot(document.getElementById("root"));
 
 const sandpackComponent = React.createElement(
     Sandpack,{ 
-        template: "react",
+        template: "static",
         options:{
             externalResources: ["https://cdn.tailwindcss.com"]},
                 files: {
-                    "/FirstGame": `import React from 'react';
-
-
-export default () =>{
-let currentPlayer = 'X'
+                    "/index.html" : `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крестики Нолики</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameBoard" class="board"></div>
+    <script src="script.js"></script>
+</body>
+</html>`,
+                    "/TicTac.js": `let currentPlayer = 'X'
 let board = [
     ['', '', ''],
     ['', '', ''],
@@ -48,7 +57,7 @@ function handleCellClick(event) {
         event.target.textContent = currentPlayer;
 
         if(chekWin()) {
-            alert("Игрок " + currentPlayer + " выиграл!");
+            alert("Игрок "+ currentPlayer + " выиграл!");
         } else if (board.every(row => row.every(cell => cell !== ''))) {
             alert('Ничья!');
             resetGame();
@@ -89,13 +98,34 @@ function resetGame() {
     Array.from(cells).forEach(cell => {
         cell.textContent = '';
     });
+}`,
+    "/style.css" : 
+`
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
-    return (
-        <div id="gameBoard" class="board"></div>
-    )
-}`,
-                }
+.board {
+    display: inline-block;
+    margin: 20px;
+}
+
+.row {
+    display: flex;
+}
+.cell {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+`,
+        }
     },
     null
 );
