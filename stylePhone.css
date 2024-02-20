@@ -39,16 +39,64 @@
     /*-----------------------------------Bootcamp invitation--------------------------------------------------------------------------------------*/
 
     .bootcamp-invitation {
+        margin-top: 50px;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 10px;
+        height: auto;
         width: 75%;
     }
     .bootcamp-invitation > h2 {
         font-size: 30px;
     }
+    .options-container {
+        gap: 10px;
+        justify-content: space-between;
+    }
     .option {
-        font-size: 23px;
+        font-size: 20px;
+    }
+    .visible-element{
+        padding-top: 40px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .cards {
+        max-width: 130px;
+    }
+    
+    .cards > b {
+        width: 100%;
+        font-size: 20px;
+    }
+    
+    .cards > p {
+        width: 100%;
+        font-size: 15px;
+        color: #A0A0A2;
+    }
+    
+    /* -------------------------------------History Gefest--------- */
+    .history-gefest {
+        margin-top:100px;
+        padding: 10px;
+        gap:10px;
+        flex-direction: column;
+        font-size: 20px;
+    }
+    .history-gefest > img {
+        max-width: 80%;
+    }
+    
+    .history-gefest > p {
+        max-width: 80%;
+    }
+
+    /* ----------------------------------bootcamp-information-section----- */
+    .bootcamp-information-section {
+        padding: 10px;
+        margin-top: 40px;
+        width: 80%;
     }
 }
