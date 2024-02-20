@@ -7,7 +7,7 @@ const sandpackComponent = React.createElement(
 Sandpack,
 { template: "react",
 files:{
-    "/App.js": `import React, { useState } from 'react';
+    "/FirstGame.js": `import React, { useState } from 'react';
 
     const Board = ({ squares, onClick }) => {
       const renderSquare = (index) => {
@@ -75,7 +75,7 @@ files:{
               {history.map((step, move) => (
                 <li key={move}>
                   <button onClick={() => jumpTo(move)}>
-                    {move === 0 ? 'Go to game start' : `Go to move #${move}`}
+                    {move === 0 ? 'Go to game start' : "Go to move #"+move}
                   </button>
                 </li>
               ))}
