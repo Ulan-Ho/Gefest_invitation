@@ -34,7 +34,6 @@
             files: {
             "/FirstGame.js": {code:`import React from 'react';
 
-export default () =>{
 let currentPlayer = 'X'
 let board = [
     ['', '', ''],
@@ -111,6 +110,7 @@ function resetGame() {
         cell.textContent = '';
     });
 }
+export default () =>{
     return (
         <div id="gameBoard" class="board"></div>
   )
