@@ -345,6 +345,8 @@ a {
 /*-----------------------------------Game section--------------------------------------------------------------------------------------*/
 
 .game-section {
+    max-width:1440px;
+    margin: auto;
     padding: 100px;
 }
 
@@ -433,6 +435,7 @@ a {
 
 .payment-section {
     max-width: 1440px;
+    margin: auto;
     padding: 100px;
     display: flex;
     align-items: center;
