@@ -1,286 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gefest invitation</title>
-    <link rel="icon" href="./Image/favicon.ico" type="image/x-icon">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="stylePhone.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-
+<html>
+  <head>
+    <meta charset="UTF-8" />
+ 
     <script type="importmap">
-        {
-          "imports": {
-            "react": "https://esm.sh/react@18.2.0",
-            "react-dom": "https://esm.sh/react-dom@18.2.0",
-            "react-dom/": "https://esm.sh/react-dom@18.2.0/",
-            "@codesandbox/sandpack-react": "https://esm.sh/@codesandbox/sandpack-react@2.8.0"
-          }
+      {
+        "imports": {
+          "react": "https://esm.sh/react@18.2.0",
+          "react-dom": "https://esm.sh/react-dom@18.2.0",
+          "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+          "@codesandbox/sandpack-react": "https://esm.sh/@codesandbox/sandpack-react@2.8.0"
         }
-      </script>
-      <script type="module" src="module.js"></script>
-
-</head>
-<body>
-
-        <div class="first-section">
-            <div class="right-first">
-                <h2 class="big-text text-border">ИГРАЙ ПО НОВЫМ ПРАВИЛАМ!</h2>
-                <p class="text-background-white middle-text">
-                    Время новых возможностей в IT!
-                    Узнай, как эффективно использовать их на нашем “Буткемпе”
-                </p>
-            </div>
-            <div class="left-first">
-                <img src="./Image/image 4.png" alt="">
-            </div>
-        </div>
-
-        <div class="bootcamp-invitation">
-            <h2 class="big-middle-text text-border">УЧАСТВУЙ В БУТКЕМПЕ, ЕСЛИ ТЫ:</h2>
-
-            <div class="options-container">
-                <div class="option" onclick="showStudentContent()">
-
-                    <b>Студент, хочешь научится программированию и начать зарабатывать </b>
-                    
-                    <p>но не понимаешь с чего начать, как это устроено, какой язык выбрать, как продавать</p>
-                                
-                </div>
-
-                <div class="option" onclick="showJuniorContent()" >
-
-                    <b>Начинающий программист (Junior)</b>
-
-                    <p>но ты не знаешь как эффективно работать, не можешь найти проекты или работы</p>
-
-                </div>
-            </div>
-
-            <div class="animation-container visible-element" id="studentContent">
-                <div class="cards">
-
-                    <b>Быстрый Старт</b>
-
-                    <p>Выбери свой первый язык программирования и создай свой первый проект, за 3 дня!</p>
-
-                </div>
-
-                <div class="cards">
-
-                    <b>Поддержка</b>
-
-                    <p>Получишь поддержку от 100 таких же студентов, как и ты!</p>
-                </div>
-
-                <div class="cards">
-
-                    <b>Деньги</b>
-
-                    <p>Предоставим готовые инструменты, которые помогут тебе привлечь первых заказчиков, и сделать продажу!</p>
-
-                </div>
-            </div>
-
-            <div class="animation-container" id="juniorContent">
-
-                <div class="cards">
-
-                    <b>Работа</b>
-
-                    <p>Научись привлекать заказчиков и проекты, заработай первые деньги (за 3 дня)!</p>
-
-                </div>
-                <div class="cards">
-
-                    <b>Поддержка</b>
-
-                    <p>Получишь поддержку от 100 таких же студентов, как и ты!</p>
-
-                </div>
-                <div class="cards">
-
-                    <b>Деньги</b>
-
-                    <p>Предоставим готовые инструменты, которые помогут тебе привлечь первых заказчиков, и сделать продажу </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="history-gefest">
-
-            <img src="./Image/Default_Picture_Hephaestus_forging_his_best_creation_the_lette_0.jpg" alt="">
-
-            <p class="text-border">
-                <b class="small-text">
-                    В давние времена, когда мир преображался под дыханием божественного творчества, каждый мастер своего дела находил вдохновение в силах Гефеста. Сегодня же, благодаря вашему решению отправиться в путешествие по миру кодирования, вы становитесь частью этого великого наследия. <br>
-
-                    Преодолевая трудности и преодолевая препятствия, вы направляетесь в виртуальные кузницы Гефеста на нашем сайте. Здесь вы будете проводить свое собственное творческое таинство, создавая свои первые строки кода и зачаровывая мир своей собственной игрой. <br>            
-                    
-                    Итак, погрузитесь в этот мир возможностей и откройте для себя свои таланты, ведь вас ждет не только увлекательное путешествие, но и возможность воплотить в жизнь свои самые смелые идеи в виде собственной игры, прямо здесь, на нашем сайте. <br>
-            
-                </b>
-            </p>
-
-        </div>
-
-
-        <div class="bootcamp-information-section">
-            <b class="big-middle-text"><span class="green text-overline">О буткэмпе,</span> чему мы там учим?</b>
-
-            <p class="middle-text text-border">
-                Зачем рассказывать о том, чему вы научитесь за 3 дня, если мы можем показать наглядно? :) 
-                Тем более, читать бы вам пришлось очень долго, так как мы учим людей продавать уже на 2 день обучения!
-            </p>
-        </div>
-
-
-        <div class="game-section">
-            <div id="root"></div>
-        </div>
-        <!-- <div class="sandbox-game"  id="app">Мини игра которую они сами сделают (2минуты)</div>
-
-        <div>Игра чуть труднее (3 минут)</div>
-
-        <div>Игра которую мы сами сделали (Написанный код, который они могут посмотреть, как круто мы сделали)</div>
-
-        <div>Чат бот который мы сделали, могут позадавать вопросы, пообщаться
-        </div> -->
-
-        <div class="student-case-section">
-            
-            <h2 class="big-middle-text text-border text-italic">Наши кейсы, и показать людям сколько они могут <span class="green">заработать.</span></h2>
-        
-            <div class="cases-student">
-                <div class="student-case-card">
-                    <img src="" alt="">
-                    <b>info</b>
-                    <p>чего добился</p>
-                </div>
-                <div class="student-case-card">
-                    <img src="" alt="">
-                    <b>info</b>
-                    <p>чего добился</p>
-                </div class="student-case-card">
-        
-                <div class="student-case-card">
-                    <img src="" alt="">
-                    <b>info</b>
-                    <p>чего добился</p>
-                </div>
-        
-                <div class="student-case-card">
-                    <img src="" alt="">
-                    <b>info</b>
-                    <p>чего добился</p>
-                </div>
-        
-                <div class="student-case-card">
-                    <img src="" alt="">
-                    <b>info</b>
-                    <p>чего добился</p>
-                </div>
-        
-                <div class="student-case-card">
-                    <img src="" alt="">
-                    <b>info</b>
-                    <p>чего добился</p>
-                </div>
-
-            </div>
-
-
-        </div>
-
-        <div class="job-openings-section">
-            <!-- <div class="big-middle-text text-border text-italic">Показать количество компаний которым нужны программисты, и сколько они УЖЕ недозарабатывают </div> -->
-            <div class="big-middle-text text-background-white text-normal">Какое количество вакансий на должность программиста в Казахстане? </div>
-
-            <div class="container-img-job"><img id="img-job-openings" src="./Image/Снимок экрана 2024-02-18 151128.png" alt=""></div>
-
-            <div class="big-middle-text text-border text-italic margin-top">Как можешь увидеть, только в казахстане более 2 200 вакансий компаний, которые ищут программиста к себе, вот несколько из них:</div>
-        
-            <div class="options-container">
-                <div class="option job-button" onclick="showKzContent()">Kazahstan</div>
-                <div class="option job-button" onclick="showWorldContent()">World</div>
-            </div>
-
-            <div class="animation-container visible-element" id="kzContent">
-                <img src="./Image/kz_.png" alt="">
-                <img src="./Image/kz_1.png" alt="">
-                <img src="./Image/kz_3.png" alt="">
-                <img src="./Image/kz_5.png" alt=""><img src="" alt="">
-            </div>
-
-
-            <div class="animation-container visible-element" id="worldContent">
-                <img src="./Image/all_1.png" alt="">
-                <img src="./Image/all_2.png" alt="">
-                <img src="./Image/all_3.png" alt="">
-                <img src="./Image/all_4.png" alt="">
-                <img src="./Image/all_5.png" alt="">
-                <img src="./Image/all_6.png" alt="">
-            </div>
-        </div>
-
-
-        <div class="input-section">
-            <div id="slider-container">
-                <label for="year-slider">Выберите год:</label>
-                <input type="range" min="2005" max="2024" step="1" value="2024" id="year-slider">
-                <div id="result"></div>
-
-            </div>
-            <script src="input.js"></script>
-        </div>
-        
-
-        <div class="payment-section">
-
-            <div class="payment-button">
-
-                <div id="showFormBtn">Хочу участвовать в буткемпе</div>
-            
-            </div>
-            
-        </div>
-    </div>
-
-    <form class="form-position" action="" >
-        <div id="popupForm" class="popup-form">
-        <span class="close-form" onclick="closeForm()">&times;</span>
-        <header>
-            <div>Приветствую! Меня зовут Гебрион, я твой проводник в мир программирования! Давай познакомимся!</div>
-            <div><img src="" alt=""></div>
-        </header>
-        <div>
-            <label for="">Как тебя зовут?</label>
-            <input type="text" placeholder="Имя"> <br>  
-            <label for="">Твой номер?</label>
-            <input type="text" placeholder="Номер">
-
-            <div class="change-box">
-                <div><input type="checkbox" name="" id="" onclick="oneChange()">3 000 тг</div>
-                <div><input type="checkbox" name="" id="" onclick="oneChange()">9000 тг</div>
-                <div><input type="checkbox" name="" id="" onclick="oneChange()">15 000 тг</div>
-            </div>
-
-            <button type="submit"><a onclick="closeForm()" href="https://pay.kaspi.kz/pay/m4htfvle" target="_blank">Отправить</a></button>
-        </div>
-    </div>
-    </form>
-    <button id="showFormBtn">Открыть форму</button>
-
-    <footer class="footeer-section">
-        <div>Social network</div>
-        <div>We network</div>
-        <div>some information</div>
-    </footer>
-    <script src="script.js"></script>
-</body>
+      }
+    </script>
+ 
+    <script type="module">
+      import React from "react";
+      import { createRoot } from "react-dom/client";
+      import { Sandpack } from "@codesandbox/sandpack-react";
+ 
+      const root = createRoot(document.getElementById("root"));
+      const sandpackComponent = React.createElement(
+        Sandpack,
+        { template: "react" },
+        null
+      );
+      root.render(sandpackComponent);
+    </script>
+  </head>
+ 
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
