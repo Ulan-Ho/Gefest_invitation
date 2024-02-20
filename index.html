@@ -24,6 +24,7 @@
         import React from "react";
         import { createRoot } from "react-dom/client";
         import { Sandpack } from "@codesandbox/sandpack-react";
+        import FirstGame from "./FirstGame"
 
         const root = createRoot(document.getElementById("root"));
         const sandpackComponent = React.createElement(
@@ -32,90 +33,8 @@
             options:{
         externalResources: ["https://cdn.tailwindcss.com"]},
             files: {
-            "/FirstGame.js": {code:`import React from 'react';
-
-export default () =>{
-let currentPlayer = 'X'
-let board = [
-    ['', '', ''],
-    ['', '', ''],
-    ['', '', '']
-]
-let gameBoardElement = document.getElementById('gameBoard');
-
-// Create game board
-for (let i = 0; i < 3; i++) {
-    let rowElement = document.createElement('div');
-    rowElement.className = 'row';
-
-    for (let j; j < 3; j++) {
-        let cell = document.createElement('div');
-        cell.className = 'cell';
-        cell.setAttribute('data-row', i);
-        cell.setAttribute('data-cell', j);
-        cell.addEventListener('click', handleCellClick);
-        rowElement.append(cell);
-    }
-
-    gameBoardElement.append(rowElement);
-}
-
-function handleCellClick(event) {
-    let row = event.target.getAttribute('data-row');
-    let col = event.target.getAttribute('data-col');
-
-    if (board[row][col] === '') {
-        board[row][col] == currentPlayer;
-        event.target.textContent = currentPlayer;
-
-        if(chekWin()) {
-            alert("Игрок " + currentPlayer + " выиграл!");
-        } else if (board.every(row => row.every(cell => cell !== ''))) {
-            alert('Ничья!');
-            resetGame();
-        } else {
-            currentPlayer = currentPlayer === 'X' ? 'O' : 'X' ;
-        }
-    }
-}
-
-function checkWin() {
-    let winCombination = [
-        [[0,0], [0,1], [0,2]],
-        [[1,0], [1,1], [1,2]],
-        [[2,0], [2,1], [2,2]],
-
-        [[0,0], [1,0], [2,0]],
-        [[0,1], [1,1], [2,1]],
-        [[0,2], [1,2], [2,2]],
-
-        [[0,0], [1,1], [2,2]],
-        [[0,2], [1,1], [2,0]],
-    ];
-
-    return winCombination.some(combination => {
-        return combination.every(([row, col]) => board[row][col] !== '' && board[row][col] === board[combination[0][0]][combination[0][1]]);
-    });
-}
-
-function resetGame() {
-    currentPlayer = 'X';
-    board = [
-        ['', '', ''],
-        ['', '', ''],
-        ['', '', '']
-    ];
-
-    let cells = document.getElementsByClassName('cell');
-    Array.from(cells).forEach(cell => {
-        cell.textContent = '';
-    });
-}
-
-    return (
-        <div id="gameBoard" class="board"></div>
-  )
-    }`,
+            "/FirstGame.js": {
+                code: <FirstGame /> ,
     active:true},
     "/SecondGame.js":`export default () => "return <h1>Hello Sandpack</h1>";`,
     "/index.js":`import React, { StrictMode } from "react";
@@ -155,12 +74,12 @@ root.render(
         </div>
 
         <div class="bootcamp-invitation">
-            <h2 class="big-text text-border">УЧАСТВУЙ В БУТКЕМПЕ, ЕСЛИ ТЫ:</h2>
+            <h2 class="big-middle-text text-border">УЧАСТВУЙ В БУТКЕМПЕ, ЕСЛИ ТЫ:</h2>
 
             <div class="options-container">
                 <div class="option" onclick="showStudentContent()">
 
-                    <b><span class="green text-underline">Студент,</span> хочешь научится программированию и начать зарабатывать </b>
+                    <b>Студент, хочешь научится программированию и начать зарабатывать </b>
                     
                     <p>но не понимаешь с чего начать, как это устроено, какой язык выбрать, как продавать</p>
                                 
@@ -168,7 +87,7 @@ root.render(
 
                 <div class="option" onclick="showJuniorContent()" >
 
-                    <b>Начинающий программист <span class="green text-underline">(Junior)</span></b>
+                    <b>Начинающий программист (Junior)</b>
 
                     <p>но ты не знаешь как эффективно работать, не можешь найти проекты или работы</p>
 
@@ -247,9 +166,9 @@ root.render(
 
 
         <div class="bootcamp-information-section">
-            <b class="big-middle-text"><span class="green text-overline">О буткэмпе,</span> чему мы там учим?</b>
+            <b>О буткэмпе, чему мы там учим?</b>
 
-            <p class="middle-text text-border">
+            <p>
                 Зачем рассказывать о том, чему вы научитесь за 3 дня, если мы можем показать наглядно? :) 
                 Тем более, читать бы вам пришлось очень долго, так как мы учим людей продавать уже на 2 день обучения!
             </p>
@@ -270,7 +189,11 @@ root.render(
 
         <div class="student-case-section">
             
+<<<<<<< HEAD
             <h2 class="big-middle-text text-border text-italic">Наши кейсы, и показать людям сколько они могут <span class="green">заработать.</span></h2>
+=======
+            <h2 class="all-b">Наши кейсы, и показать людям сколько они могут заработать.</h2>
+>>>>>>> e64d8a5414acdcd9176777878b43aef9c02aeea1
         
             <div class="cases-student">
                 <div class="student-case-card">
@@ -314,12 +237,20 @@ root.render(
         </div>
 
         <div class="job-openings-section">
+<<<<<<< HEAD
             <!-- <div class="big-middle-text text-border text-italic">Показать количество компаний которым нужны программисты, и сколько они УЖЕ недозарабатывают </div> -->
             <div class="big-middle-text text-background-white text-normal">Какое количество вакансий на должность программиста в Казахстане? </div>
 
             <div class="container-img-job"><img id="img-job-openings" src="./Image/Снимок экрана 2024-02-18 151128.png" alt=""></div>
 
             <div class="big-middle-text text-border text-italic margin-top">Как можешь увидеть, только в казахстане более 2 200 вакансий компаний, которые ищут программиста к себе, вот несколько из них:</div>
+=======
+            <div class="all-b">Показать количество компаний которым нужны программисты, и сколько они УЖЕ недозарабатывают </div>
+
+            <div class="container-img-job"><img id="img-job-openings" src="./Image/Снимок экрана 2024-02-18 151128.png" alt=""></div>
+
+            <div class="all-b">Как можешь увидеть, только в казахстане более 2 200 вакансий компаний, которые ищут программиста к себе, вот несколько из них:</div>
+>>>>>>> e64d8a5414acdcd9176777878b43aef9c02aeea1
         
             <div class="options-container">
                 <div class="option job-button" onclick="showKzContent()">Kazahstan</div>
