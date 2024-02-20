@@ -4,7 +4,7 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 
 const root = createRoot(document.getElementById("root"));
 
-const sandpackComponent = React.createElement(
+const sandpackComponent = (
     Sandpack,{ 
         template: "static",
         options:{
