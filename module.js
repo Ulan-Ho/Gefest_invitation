@@ -20,7 +20,7 @@ const sandpackComponent = React.createElement(
 </head>
 <body>
     <div id="gameBoard" class="board"></div>
-    <script src="TicTac.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>`,
                     "/TicTac.js": `let currentPlayer = 'X'
@@ -57,7 +57,7 @@ function handleCellClick(event) {
         event.target.textContent = currentPlayer;
 
         if(chekWin()) {
-            alert("Игрок "+ currentPlayer + " выиграл!");
+            alert("Игрок " + currentPlayer +" выиграл!");
         } else if (board.every(row => row.every(cell => cell !== ''))) {
             alert('Ничья!');
             resetGame();
@@ -99,9 +99,7 @@ function resetGame() {
         cell.textContent = '';
     });
 }`,
-    "/style.css" : 
-`
-body {
+    "/style.css" : `body {
     font-family: Arial, sans-serif;
     text-align: center;
 }
@@ -123,8 +121,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-`,
+}`,
         }
     },
     null
