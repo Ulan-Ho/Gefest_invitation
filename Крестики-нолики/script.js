@@ -28,7 +28,7 @@ function handleCellClick(event) {
     let col = event.target.getAttribute('data-col');
 
     if (board[row][col] === '') {
-        board[row][col] == currentPlayer;
+        board[row][col] = currentPlayer;
         event.target.textContent = currentPlayer;
 
         if(chekWin()) {
