@@ -1,34 +1,47 @@
+function visitorContent(id){
+    document.getElementById(id).style.display = 'flex';
+    document.getElementById(id).style.width = '100%';
+    document.getElementById(id).style.paddingTop = '75px';
+    document.getElementById(id).style.justifyContent = 'space-between';
+    document.getElementById(id).style.flexDirection = 'row';
+    document.getElementById(id).style.borderBottomStyle = '15px solid #ffff';
+}
+
+function manyContent(id) {
+    document.getElementById(id).style.display = 'flex';
+    document.getElementById(id).style.flexWrap = 'wrap';
+    document.getElementById(id).style.gap = '1px';
+    document.getElementById(id).style.justifyContent = 'start'
+}
+
 function showStudentContent() {
-    document.getElementById('studentContent').style.display = 'flex';
-    document.getElementById('studentContent').style.width = '100%';
-    document.getElementById('studentContent').style.paddingTop = '75px';
-    document.getElementById('studentContent').style.justifyContent = 'space-between';
-    document.getElementById('studentContent').style.flexDirection = 'row';
-    document.getElementById('studentContent').style.borderBottomStyle = '15px solid #ffff';
+    visitorContent('studentContent');
     document.getElementById('juniorContent').style.display = 'none';
 }
 
 function showJuniorContent() {
     document.getElementById('studentContent').style.display = 'none';
-    document.getElementById('juniorContent').style.display = 'flex';
-    document.getElementById('juniorContent').style.width = '100%';
-    document.getElementById('juniorContent').style.paddingTop = '75px';
-    document.getElementById('juniorContent').style.justifyContent = 'space-between';
-    document.getElementById('juniorContent').style.flexDirection = 'row';
+    visitorContent('juniorContent');
 }
 
+
 function showKzContent() {
-    document.getElementById('kzContent').style.display = 'flex';
-    document.getElementById('kzContent').style.flexWrap = 'wrap';
-    document.getElementById('kzContent').style.gap = '1px';
-    document.getElementById('kzContent').style.justifyContent = 'start'
+    manyContent('kzContent')
     document.getElementById('worldContent').style.display = 'none';
 }
 
 function showWorldContent() {
-    document.getElementById('worldContent').style.display = 'flex';
-    document.getElementById('worldContent').style.flexWrap = 'wrap';
-    document.getElementById('worldContent').style.gap = '1px';
-    document.getElementById('kzContent').style.justifyContent = 'start';    
+    manyContent('worldContent');
     document.getElementById('kzContent').style.display = 'none';
 }
+
+/*-----------------------------------form section--------------------------------------------------------------------------------------*/
+
+document.getElementById('showFormBtn').addEventListener('click', function() {
+    document.getElementById('popupForm').style.display = 'block';
+  });
+  
+  function closeForm() {
+    document.getElementById('popupForm').style.display = 'none';
+  }
+  
