@@ -68,7 +68,7 @@ function handleCellClick(event) {
         event.target.textContent = currentPlayer;
 
         if(chekWin()) {
-            alert("Игрок " + currentPlayer "    выиграл!");
+            alert("Игрок " + currentPlayer + " выиграл!");
         } else if (board.every(row => row.every(cell => cell !== ''))) {
             alert('Ничья!');
             resetGame();

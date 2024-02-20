@@ -1,30 +1,3 @@
-// async function mainInvitation(nameUser, numberUser) {
-//     nameUser = prompt(`Приветствую! Меня зовут Гебрион, я твой проводник в мир программирования! 
-// Давай познакомимся!
-// Как тебя зовут?`);
-    
-//     alert(`Привет ${nameUser}`)
-
-//     numberUser = +prompt(`Можешь дать свой номер телефона? Обещаю не в злых умыслах`);
-
-
-
-//     alert(`Спасибо за доверие!`)
-//     var nameElement = document.getElementById("name");
-
-//     let numberElement = []
-    
-//     numberElement.push({nameUser: numberUser})
-    
-//     nameElement.textContent = nameUser;
-
-    
-//     return nameUser ? 'null': null
-
-// };
-
-// mainInvitation('', '');
-
 function showStudentContent() {
     document.getElementById('studentContent').style.display = 'flex';
     document.getElementById('studentContent').style.width = '100%';
