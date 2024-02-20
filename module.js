@@ -20,7 +20,7 @@ const sandpackComponent = React.createElement(
 </head>
 <body>
     <div id="gameBoard" class="board"></div>
-    <script src="script.js"></script>
+    <script src="TicTac.js"></script>
 </body>
 </html>`,
                     "/TicTac.js": `let currentPlayer = 'X'

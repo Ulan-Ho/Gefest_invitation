@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Крестики Нолики</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Tic Tac Toe</title>
 </head>
 <body>
-    <div id="gameBoard" class="board"></div>
+    <div class="container" id="app">
+      <h1>Tic Tac Toe</h1>
+      <div class="board" id="board">
+      </div>
+      <div class="status" id="status">Next player: X</div>
+      <button onclick="resetGame()">Reset Game</button>
+    </div>
     <script src="script.js"></script>
-</body>
-</html>
+  </body>
+  </html>
+  

@@ -1,76 +1,152 @@
-let currentPlayer = 'X'
+let currentPlayer = 'X';
 let board = [
-    ['', '', ''],
-    ['', '', ''],
-    ['', '', '']
-]
-let gameBoardElement = document.getElementById('gameBoard');
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', '']
+];
+let gameActive = true;
 
-// Create game board
-for (let i = 0; i < 3; i++) {
-    let rowElement = document.createElement('div');
-    rowElement.className = 'row';
+const statusElement = document.getElementById('status');
+const boardElement = document.getElementById('board');
 
-    for (let j; j < 3; j++) {
-        let cell = document.createElement('div');
-        cell.className = 'cell';
-        cell.setAttribute('data-row', i);
-        cell.setAttribute('data-cell', j);
-        cell.addEventListener('click', handleCellClick);
-        rowElement.append(cell);
+const checkWinner = () => {
+  const winPatterns = [
+    [[0, 0], [0, 1], [0, 2]], // Rows
+    [[1, 0], [1, 1], [1, 2]],
+    [[2, 0], [2, 1], [2, 2]],
+    [[0, 0], [1, 0], [2, 0]], // Columns
+    [[0, 1], [1, 1], [2, 1]],
+    [[0, 2], [1, 2], [2, 2]],
+    [[0, 0], [1, 1], [2, 2]], // Diagonals
+    [[0, 2], [1, 1], [2, 0]]
+  ];
+
+  for (const pattern of winPatterns) {
+    const [a, b, c] = pattern;
+    if (board[a[0]][a[1]] && board[a[0]][a[1]] === board[b[0]][b[1]] && board[a[0]][a[1]] === board[c[0]][c[1]]) {
+      gameActive = false;
+      return board[a[0]][a[1]];
     }
+  }
 
-    gameBoardElement.append(rowElement);
-}
+  if (board.flat().every(cell => cell !== '')) {
+    gameActive = false;
+    return 'Draw';
+  }
 
-function handleCellClick(event) {
-    let row = event.target.getAttribute('data-row');
-    let col = event.target.getAttribute('data-col');
+  return null;
+};
 
-    if (board[row][col] === '') {
-        board[row][col] == currentPlayer;
-        event.target.textContent = currentPlayer;
+const updateStatus = () => {
+  const winner = checkWinner();
 
-        if(chekWin()) {
-            alert(`Игрок ${currentPlayer} выиграл!`);
-        } else if (board.every(row => row.every(cell => cell !== ''))) {
-            alert('Ничья!');
-            resetGame();
-        } else {
-            currentPlayer = currentPlayer === 'X' ? 'O' : 'X' ;
-        }
-    }
-}
+  if (winner) {
+    statusElement.textContent = winner === 'Draw' ? 'It\'s a Draw!' : `Player ${winner} wins!`;
+  } else {
+    statusElement.textContent = `Next player: ${currentPlayer}`;
+  }
+};
 
-function checkWin() {
-    let winCombination = [
-        [[0,0], [0,1], [0,2]],
-        [[1,0], [1,1], [1,2]],
-        [[2,0], [2,1], [2,2]],
+const handleClick = (row, col) => {
+  if (!gameActive || board[row][col] !== '') {
+    return;
+  }
 
-        [[0,0], [1,0], [2,0]],
-        [[0,1], [1,1], [2,1]],
-        [[0,2], [1,2], [2,2]],
+  board[row][col] = currentPlayer;
+  updateStatus();
 
-        [[0,0], [1,1], [2,2]],
-        [[0,2], [1,1], [2,0]],
-    ];
+  if (!gameActive) {
+    highlightWinnerCells();
+  }
 
-    return winCombination.some(combination => {
-        return combination.every(([row, col]) => board[row][col] !== '' && board[row][col] === board[combination[0][0]][combination[0][1]]);
-    });
-}
+  currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+};
 
-function resetGame() {
+
+const resetGame = () => {
     currentPlayer = 'X';
     board = [
-        ['', '', ''],
-        ['', '', ''],
-        ['', '', '']
+      ['', '', ''],
+      ['', '', ''],
+      ['', '', '']
     ];
+    gameActive = true;
+    updateStatus();
+    renderBoard();
+  };
 
-    let cells = document.getElementsByClassName('cell');
-    Array.from(cells).forEach(cell => {
-        cell.textContent = '';
+const highlightWinnerCells = () => {
+  const winnerCells = checkWinnerCells();
+  if (winnerCells) {
+    winnerCells.forEach(cell => {
+      const [row, col] = cell;
+      const index = row * 3 + col;
+      const cellElement = document.getElementById(`cell-${index}`);
+      cellElement.classList.add('winner');
     });
-}
+  }
+};
+
+const checkWinnerCells = () => {
+  const winPatterns = [
+    [[0, 0], [0, 1], [0, 2]], // Rows
+    [[1, 0], [1, 1], [1, 2]],
+    [[2, 0], [2, 1], [2, 2]],
+    [[0, 0], [1, 0], [2, 0]], // Columns
+    [[0, 1], [1, 1], [2, 1]],
+    [[0, 2], [1, 2], [2, 2]],
+    [[0, 0], [1, 1], [2, 2]], // Diagonals
+    [[0, 2], [1, 1], [2, 0]]
+  ];
+
+  for (const pattern of winPatterns) {
+    const [a, b, c] = pattern;
+    if (board[a[0]][a[1]] && board[a[0]][a[1]] === board[b[0]][b[1]] && board[a[0]][a[1]] === board[c[0]][c[1]]) {
+      return [a, b, c];
+    }
+  }
+
+  return null;
+};
+
+const createBoard = () => {
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      const cell = document.createElement('div');
+      cell.className = 'cell';
+      cell.id = `cell-${i * 3 + j}`;
+      cell.onclick = () => handleClick(i, j);
+      boardElement.appendChild(cell);
+    }
+  }
+};
+
+const renderBoard = () => {
+    boardElement.innerHTML = ''; // Очистка доски перед отрисовкой
+  
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+        const cell = document.createElement('div');
+        cell.className = 'cell';
+        cell.id = `cell-${i * 3 + j}`;
+        cell.onclick = () => handleClick(i, j);
+  
+        // Добавим содержимое (X или O) в ячейки
+        if (board[i][j] === 'X') {
+          const xSymbol = document.createElement('div');
+          xSymbol.className = 'symbol';
+          xSymbol.textContent = 'X';
+          cell.appendChild(xSymbol);
+        } else if (board[i][j] === 'O') {
+          const oSymbol = document.createElement('div');
+          oSymbol.className = 'symbol';
+          oSymbol.textContent = 'O';
+          cell.appendChild(oSymbol);
+        }
+  
+        boardElement.appendChild(cell);
+      }
+    }
+  };
+createBoard();
+updateStatus();
