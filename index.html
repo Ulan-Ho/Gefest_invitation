@@ -20,42 +20,7 @@
           }
         }
       </script>
-      <script type="module">
-        import React from "react";
-        import { createRoot } from "react-dom/client";
-        import { Sandpack } from "@codesandbox/sandpack-react";
-        import FirstGame from "./FirstGame"
-
-        const root = createRoot(document.getElementById("root"));
-        const sandpackComponent = React.createElement(
-        Sandpack,
-        {
-            options:{
-        externalResources: ["https://cdn.tailwindcss.com"]},
-            files: {
-            "/FirstGame.js": {
-                code: <FirstGame /> ,
-    active:true},
-    "/SecondGame.js":`export default () => "return <h1>Hello Sandpack</h1>";`,
-    "/index.js":`import React, { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./styles.css";
-
-import FirstGame from "./FirstGame";
-
-const root = createRoot(document.getElementById("root"));
-root.render(
-  <StrictMode>
-    <FirstGame />
-  </StrictMode>
-);`
-            },
-    customSetup:{entry:"/index.js"},
-    template: "react"},
-        null
-        );
-        root.render(sandpackComponent);
-      </script>
+      <script type="module" src="./module.js"></script>
 
 </head>
 <body>
