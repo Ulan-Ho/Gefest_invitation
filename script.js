@@ -1,29 +1,29 @@
-async function mainInvitation(nameUser, numberUser) {
-    nameUser = prompt(`Приветствую! Меня зовут Гебрион, я твой проводник в мир программирования! 
-Давай познакомимся!
-Как тебя зовут?`);
+// async function mainInvitation(nameUser, numberUser) {
+//     nameUser = prompt(`Приветствую! Меня зовут Гебрион, я твой проводник в мир программирования! 
+// Давай познакомимся!
+// Как тебя зовут?`);
     
-    alert(`Привет ${nameUser}`)
+//     alert(`Привет ${nameUser}`)
 
-    numberUser = +prompt(`Можешь дать свой номер телефона? Обещаю не в злых умыслах`);
+//     numberUser = +prompt(`Можешь дать свой номер телефона? Обещаю не в злых умыслах`);
 
 
 
-    alert(`Спасибо за доверие!`)
-    var nameElement = document.getElementById("name");
+//     alert(`Спасибо за доверие!`)
+//     var nameElement = document.getElementById("name");
 
-    let numberElement = []
+//     let numberElement = []
     
-    numberElement.push({nameUser: numberUser})
+//     numberElement.push({nameUser: numberUser})
     
-    nameElement.textContent = nameUser;
+//     nameElement.textContent = nameUser;
 
     
-    return nameUser ? 'null': null
+//     return nameUser ? 'null': null
 
-};
+// };
 
-mainInvitation('', '');
+// mainInvitation('', '');
 
 function showStudentContent() {
     document.getElementById('studentContent').style.display = 'flex';
@@ -31,6 +31,7 @@ function showStudentContent() {
     document.getElementById('studentContent').style.paddingTop = '75px';
     document.getElementById('studentContent').style.justifyContent = 'space-between';
     document.getElementById('studentContent').style.flexDirection = 'row';
+    document.getElementById('studentContent').style.borderBottomStyle = '15px solid #ffff';
     document.getElementById('juniorContent').style.display = 'none';
 }
 
