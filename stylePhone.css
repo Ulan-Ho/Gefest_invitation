@@ -12,7 +12,7 @@
     }
 
     .big-middle-text{
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .middle-text{
@@ -99,7 +99,7 @@
         margin-top: 40px;
         width: 80%;
     }
-
+    /* --------------------------------student-case-section----------- */
     .student-case-section {
         width: 80%;
         padding: 10px;
@@ -113,5 +113,60 @@
     .cases-student {
         justify-content:center;
         gap: 10px;
+    }
+    /* --------------------------------Game-------------- */
+    .game-section {
+        width: 80%;
+        padding: 70px 10px;
+    }
+    /* ---------------------------------job-openings-section-------------------*/
+    .job-openings-section {
+        margin-top: 50px;
+        padding: 10px;
+        width: 80%;
+    
+    }
+    #img-job-openings {
+        width: 100%;
+        padding: 0px;
+    }
+    .job-button {
+        margin-top: 50px;
+        font-size: 20px;
+        padding: 50px 45px;
+    }
+    
+    
+    
+    /* ----------------------------input-section------------------ */
+    .input-section {
+        padding: 30px;
+        width: 90%;
+        font-size: 20px;
+    }
+    #slider-container {
+
+        background-color:black;
+        border-radius: 20px;
+        border:3px solid white;
+        width: 80%;
+        text-align: center;
+        padding: 25px 20px;
+    }
+    /* -------------------------------payment-section */
+    .payment-section {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        
+    }
+    
+    .payment-button {
+        padding: 20px;
+        background-color:white;
+        color:black;
+        border-radius: 15px;
     }
 }
