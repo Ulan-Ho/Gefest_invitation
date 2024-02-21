@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
-    <title>Крестики Нолики</title>
-    <link rel="stylesheet" href="style.css">
+ 
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@18.2.0",
+          "react-dom": "https://esm.sh/react-dom@18.2.0",
+          "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+          "@codesandbox/sandpack-react": "https://esm.sh/@codesandbox/sandpack-react@2.8.0"
+        }
+      }
+    </script>
+ 
+    <script type="module">
+      import React from "react";
+      import { createRoot } from "react-dom/client";
+      import { Sandpack } from "@codesandbox/sandpack-react";
+ 
+      const root = createRoot(document.getElementById("root"));
+      const sandpackComponent = React.createElement(
+        Sandpack,
+        { template: "react" },
+        null
+      );
+      root.render(sandpackComponent);
+    </script>
   </head>
+ 
   <body>
-    <div id="gameBoard" class="board"></div>
-    <script src="https://unpkg.com/sandpack/browser-bundle.min.js"></script>
-    <script type="module" src="./Крестики-нолики/script.js"></script>
+    <div id="root"></div>
   </body>
 </html>
