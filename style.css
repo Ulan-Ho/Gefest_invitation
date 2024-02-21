@@ -78,7 +78,8 @@ a {
 .text-border{
     border-width: 1px 1px 1px 1px;
     border-style:solid none solid none;
-    border-color:#74C048 #74C048 #74C048 #74C048;
+    /* border-color:#74C048 #74C048 #74C048 #74C048; */
+    border-color:white white white white;
 }
 .text-border-bold{
     border-width: 1px 5px 5px 1px;
