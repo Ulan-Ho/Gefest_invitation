@@ -469,6 +469,11 @@ a {
     z-index: 999;
 
   }
+
+  .button{
+    padding: 10px;
+    font-size: 20px;
+  }
   
   .close-btn {
     position: absolute;
